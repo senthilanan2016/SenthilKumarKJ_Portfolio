@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SENTHIL KUMAR KJ Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">SENTHIL KUMAR KJ</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/Senthil_Photo-removebg.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>SENTHIL KUMAR KJ</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'DATA SCIENCE ENTHUSIAST  ',
+						'DATA ANALYST  ',
+						'MERN - FULL STACK DEVELOPER  ',
+						'FLUTTER MOBILE APP  ',
+						'UI / UX DESIGNER  ',
+				
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Data Analyst</h2>
+						<h2 class="d-flex" style="margin-bottom: 0">With over 3 years of experience</h2>
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/senthil-kumar-kj-585b9383/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/senthilanan2016" class="btn btn-white btn-outline-white py-3 px-4">My work</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/Senthil_Photo-removebg.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+
+
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>SENTHIL KUMAR KJ</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>3 Years 2 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Madurai, Tamil Nadu, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<br>
+
+								<div class="skill-mf">
+									<p class="title-s"><strong>SOFT SKILLS :</strong></p>
+															
+									<span>POWER BI</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>R Programming</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Tableau</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>MS EXCEL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>SQL</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>STATISTICS</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Equipped with an B.Sc. Maths and PGDCA and experience at PRP Exports, I excelled in executing transactions, managing portfolios. Now, I'm excited to transition into data analytics. I'm mastering SQL, Power BI, Excel and Python to unlock insights and drive impactful decisions. My client-centric approach and passion for data fuel my desire to contribute to a dynamic, data-driven future.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>IT Support Executive</span></li>
+									<li class="d-flex"><span>Education:</span> <span>B.Sc., Mathematics &amp; PGDCA</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Tamil and Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, R &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Stakeholder Management, Reporting & Documentation, Business Intelligence and Communication Skills</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Sports and Cinema</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<!-- <p><a href="https://www.linkedin.com/in/senthil-kumar-kj-585b9383/" class="btn btn-primary py-3 px-3">LinkedIn</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>A dynamic, diligent and performance-driven professional, with 25 years of experience in IT industry highly skilled with excellent 
+				organizational and management skills, targeting challenging assignments in Data Analysis, with an organization of high repute.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan’2021-Till Date</span>
+						<h2>IT Support Executive</h2>
+						<span class="position">PRP Exports</span>
+						<p class="mt-4">PRP Exports, a leading Indian Grranite Manufacturing company across the country.
+ 
+							<ul>
+								<li>Handling data analytical skills viz., Use automated tools to extract/acquire data from primary or secondary data sources, Provide quality assurance of imported data.</li>
+								<li>Filter and clean Data by reviewing reports and performance indicators to identify and correct problems. Support initiatives for data integrity and normalization.</li>
+								<li>Generate reports from single or multiple systems in various formats, including interactive dashboards, Tableau, Power Bl, Excel, PPt, and others. And also using Python code for file extracting and predict the model and feature engineering with the cleaned data sets.</li>
+								<li>Apart from the above as part and parcel, collaborating with UI/UX Designs teams to create low fidelity model, mid fidelity model and High fidelity model and processing the wireframes and prototype to build an effective mobile, desktop and tab app.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan’2007-Dec’2020</span>
+						<h2>Executive Assistant</h2>
+						<span class="position">PRP Exports</span>
+						<p class="mt-4">PRP Exports, a leading Indian Grranite Manufacturing company across the country.
+ 
+							<ul>
+								<li>Operational skills, inventory control of the raw materials and attention to details, Communication skills, Problem solving capability; ability to follow up with customers for approvals, track down issues with orders, track orders to completion, Preparing Journal Voucher in Excel and Accounting Journal Voucher in Tally and Cash Voucher Accounting etc.,</li>
+								<li>Purchase, preparing PO for import and indigenous purchase, Stock, maintaining the Central Excise Records such as preparing monthly ER-2 Returns, Quantitative Statement of stock of blocks, slabs, tiles & other articles. </li>
+								<li>Procurement Certificate for imported goods, CT-3 Form, APR, QPR inputs, Annexure – 19, Bonded Re-warehousing letter correspondence to the relevant range officials, attending with audit officials periodically. </li>
+								<li>Assisting General Manager in Legal works viz., preparing Affidavit, Counter Affidavit, Court related filing records and other confidential official day to day works.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May’1999-Dec’2006</span>
+						<h2>Computer Operator</h2>
+						<span class="position">Public Works Department</span>
+						<p class="mt-4">Public Works Department, Government organization.
+ 
+							<ul>
+								<li>Preparing monthly reports, Day to Day office correspondence, Preparing ECS Pay Bill, Preparing Estimates,etc.,</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2023</span>
+    					<h2>DATA SCIENCE</h2>
+    					<span class="position">Rajalakshmi Eduverse, Chennai</span>
+    					<p class="mt-4">Grade: A+</p>
+    				</div>
+    			</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2023</span>
+    					<h2>DATA ANALYTICS</h2>
+    					<span class="position">Elysium Academy, Madurai</span>
+    					<p class="mt-4">Grade: A</p>
+    				</div>
+    			</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2023</span>
+    					<h2>MERN - FULL STACK DEVELOPER</h2>
+    					<span class="position">Elysium Academy, Madurai</span>
+    					<p class="mt-4">Grade: A</p>
+    				</div>
+    			</div>
+				
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2006-2007</span>
+    					<h2>PGDCA</h2>
+    					<span class="position">Madurai Kamaraj University </span>
+    					<p class="mt-4">Grade: 58.98%</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">1996-1999</span>
+    					<h2>Bachelor of Science (Mathematics)</h2>
+    					<span class="position">Sourashtra College, Madurai</span>
+    					<p class="mt-4">Grade: 71.61%</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1-V4Q8xZzkO4yi2lzDsyzl8gFxBI6QPTr/view?usp=sharing" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on</p> 
+				<p>SQL, Python, Power BI & MS Excel.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/senthilanan2016/Ad_hoc_insights_Consumer_goods_SQL_PowerBI_Project/blob/main/Ad_Hoc%20Requests%20Consumer%20goods%20Presentation.pdf" class="block-20 zoom-effect" style="background-image: url('images/ad_hoc.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/senthilanan2016/Ad_hoc_insights_Consumer_goods_SQL_PowerBI_Project/blob/main/Ad_Hoc%20Requests%20Consumer%20goods%20Presentation.pdf">Ad-Hoc Insights: Consumer Goods Domain (SQL | Power BI)</a></h3>
+                <p>Leveraged SQL to unlock hidden insights and craft compelling visualizations, driving informed decisions across market, product, and sales.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/senthilanan2016/CodSoft/blob/main/Task_2_Movie_Rating_Prediction_With_Python.ipynb" class="block-20 zoom-effect" style="background-image: url('images/movie_reveiw.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/senthilanan2016/CodSoft/blob/main/Task_2_Movie_Rating_Prediction_With_Python.ipynb">Movie Rating Prediction with Python</a></h3>
+                <p>The Prediction of Movie Rating based on Given input = 8.052000000000003
+					This project involved the creation of a movie rating prediction system using machine learning techniques.
+					It began with the collection and preprocessing of movie data, followed by exploratory data analysis and 
+					feature engineering. The predictive model, trained on selected features such as year, duration, votes, 
+					and weighted rating, yielded promising results. A user-friendly predictive system was also developed, 
+					allowing users to input movie details and receive predicted ratings. 
+					This project demonstrates the capability of data analysis and machine learning for accurate movie rating estimation.
+				</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/senthilanan2016/Credit_Card_Expansion_Mitron_Bank/blob/main/Credit%20Card%20Expansion%20Mitron%20Bank%20-%20Presentation.pdf" class="block-20 zoom-effect" style="background-image: url('images/credit\ card.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/senthilanan2016/Credit_Card_Expansion_Mitron_Bank/blob/main/Credit%20Card%20Expansion%20Mitron%20Bank%20-%20Presentation.pdf"> Credit Card Expansion: Mitron Bank (Power BI)</a></h3>
+                <p>Leveraging Power BI, analysed 4,000 customer profiles in 5 cities, identified 2 high-potential card segments with tailored features based on spending & risk.
+				</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/senthilanan2016/AdventureWorks_PowerBI/blob/main/AdventureWorks_PowerBI.pdf" class="block-20 zoom-effect" style="background-image: url('images/Adventure\ Works\ Report\ image.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/senthilanan2016/AdventureWorks_PowerBI/blob/main/AdventureWorks_PowerBI.pdf">
+					Sales Analysis of Adventure Works (Power BI)</a></h3>
+				  <p>Crafted an interactive Power BI dashboard for Adventure Works management, leveraging data manipulation and visualizations for insightful decision making.
+				</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/senthilanan2016/Superstore_Sales_Analysis_Excel_Project/blob/main/Superstore%20sales%20Analysis.xlsx" class="block-20 zoom-effect" style="background-image: url('images/Superstore.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/senthilanan2016/Superstore_Sales_Analysis_Excel_Project/blob/main/Superstore%20sales%20Analysis.xlsx">Superstore Sales Analysis (MS Excel)</a></h3>
+				  <p>Analyzed sales data in Excel using pivot tables and visualizations to identify revenue trends, popular and slow-moving products across categories and customer segments.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github</span> </h2>
+						<div class="heading"> <h4> I enjoy addressing business challenges and discovering concealed narratives within data. </h4>
+						<br>
+						<p><a href="https://github.com/senthilanan2016" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Here is how you can contact me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>No. 36, Om Muruga Illam, Karpaga Nagar 3rd Street, Madurai, Tamil Nadu, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://9487353807">+ 91 9487353807 and 8667372313</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:senthilanan2016@gmail.com">senthilanan2016@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1-V4Q8xZzkO4yi2lzDsyzl8gFxBI6QPTr/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<div class="row justify-content-center">
+				<!-- <div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/DrJc9u9Y3dRf9sJ29" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div> -->
+			</div>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					 <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@AdityaShinde-cq7rf"><span class="icon-youtube"></span></a></li>--> 
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/senthil-kumar-kj-585b9383/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/SENTHILKUMARKJ1"><span class="icon-twitter"></span></a></li>
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="hhttps://www.instagram.com/senthilkumarkj/?hl=en"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
